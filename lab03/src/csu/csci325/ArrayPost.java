@@ -22,45 +22,32 @@ public class ArrayPost {
     private ArrayPost() {
     }
     //public constructor
-    public ArrayPost(int[] list) {
-        
-        numbers = new int[list.length];
-        for (int i = 0; i < list.length; i++) {
-            numbers[i] = list[i];
-        } 
+    public ArrayPost(ArrayList<Integer> list) {
+
     }
     
     //methods
-
-    public int[] getNumbers() {
-        return numbers;
-    }
-
     
-    // Function to find the index of an element in a primitive array in Java
-    public int post10Index(int[] numbers) {
+    public ArrayList<Integer> post10 (ArrayList<Integer> array) {
+        ArrayList<Integer> post10Array = new ArrayList();
+        int last10Index = -1;
         
-        int lastPost10Index = -1;
-        for (int i = 0; i < numbers.length; i++) {
-            if(numbers[i] == 10) {
-                lastPost10Index = i;  
-            }
+        //loop thru ArrayList and find location of last 10
+        for (int i = 0; i < array.size(); i++) {
+            int number = array.get(i);
+            if (number == 10) {
+                last10Index = i;
+            }     
         }
+        //create an ArrayList of the integers after the last 10
+        for (int i = last10Index + 1; i < array.size(); i++) {
+            post10Array.add(array.get(i));
+            
+        }
+        System.out.println(post10Array.size());
         
-        return lastPost10Index;
+        return post10Array;
     }
     
-    public ArrayList post10 (int[] numbers) {
-        
-        ArrayList post10Numbers = new ArrayList();
-        int last10index = post10Index(numbers);
-        
-        for (int i = last10index + 1; i < numbers.length; i++) {
-            post10Numbers.add(numbers[i]);  
-        }
-        
-        return post10Numbers;
-        
-    }
     
 }
