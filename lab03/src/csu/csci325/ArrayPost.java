@@ -14,9 +14,7 @@ import java.util.List;
  * @author jeanieherold
  */
 public class ArrayPost {
-    
-    //fields
-    private int[] numbers;
+ 
    
     //constructor
     private ArrayPost() {

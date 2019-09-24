@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ArrayUtil {
     
     
-//constructor
+    //constructor
     private ArrayUtil() {
     }
     //public constructor
