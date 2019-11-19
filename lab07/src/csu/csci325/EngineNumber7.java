@@ -5,6 +5,8 @@
  */
 package csu.csci325;
 
+import java.util.Scanner;
+
 /**
  *
  * @author jeanieherold
@@ -13,51 +15,40 @@ public class EngineNumber7 {
     
     public static void main(String[] args) {
         
-        String sCard;
-        int iCard = 0;
-        String cardNum;
-         
-        System.out.println("Enter your card type by list number or name:");
-        System.out.println("1. American Express");
-        System.out.println("2. Visa");
-        System.out.println("3. Mastercard");
-        System.out.println("4. Discover");
-        
-        //create a validator
-        CardValidator validator = new CardValidator();
-        System.out.println(validator.getAttempts());
-        sCard = validator.getString();
-        System.out.println(sCard);
-        if(sCard.charAt(0) == '1' || sCard.charAt(0) == '2' || sCard.charAt(0) == '3' || sCard.charAt(0) == '4') {
-            iCard = validator.getInt(); 
-            try {
-                System.out.println("iCardTYPE: " + validator.checkType(iCard));
-            } catch (MaxAttemptsExceededException e) {
-                System.out.println(e.getMessage());
-            }
-            
-            System.out.println("Enter your card number:");
-            cardNum = validator.getString();
-            System.out.println("int: " + cardNum);
-            
-        } else {
-            try {
-                System.out.println("sCardTYPE: " + validator.checkType(sCard));
-            } catch (MaxAttemptsExceededException e) {
-                System.out.println(e.getMessage());
-            }
-            System.out.println("Enter your card number:");
-            cardNum = validator.getString();
-            System.out.println("string: " + cardNum);
-        }
+       CardValidator validator = new CardValidator();
         
         try {
-            System.out.println("validator:" + validator.checkNum(cardNum, sCard, iCard));
+            System.out.println(validator.checkNum("12345432", null, 8));
+            System.out.println(validator.getAttempts());
+            System.out.println(validator.checkNum("12345432", null, 8));
+            System.out.println(validator.getAttempts());
+            System.out.println(validator.checkNum("12345432", null, 8));
+            System.out.println(validator.getAttempts());
+            System.out.println(validator.checkNum("12345432", null, 8));
+            System.out.println(validator.getAttempts());
         } catch (MaxAttemptsExceededException e) {
-            System.out.println(e.getMessage());
+            System.out.println("thrown at: " + validator.getAttempts());
+            System.out.println("Max attempts exceeded-Engine7");
         }
         
-        System.out.println(validator.getAttempts());
+        
+        
+        
+        
+
+        
+        //test address verification ------------------------
+//        String address;
+//        Scanner keyboard = new Scanner(System.in);
+
+//        System.out.println("Enter your address:");
+//        address = keyboard.nextLine();
+
+//        AddressVerification verify = new AddressVerification();
+        
+//        verify.validateAddress(address);
+        
+//        System.out.println(verify.validateAddress("123 OldBirch, Wren, 29673"));
         
     }
     

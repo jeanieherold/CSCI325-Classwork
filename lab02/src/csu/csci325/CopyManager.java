@@ -48,7 +48,8 @@ public class CopyManager {
     }
     
     public int copyIt() {
-        if(mPaper.getAmount() > 0 && mToner.getAmount() > 0) {
+        //need to have at least 0.05 toner left to make a copy
+        if(mPaper.getAmount() > 0 && mToner.getAmount() > 0.05) {
             mPaper.decrementPaper();
             mToner.decrementAmt();
             mTotalCount++;
@@ -58,7 +59,7 @@ public class CopyManager {
         } else if (mPaper.getAmount() <= 0) {
             System.out.println("Paper is out");
             return -2; //copier is out of paper
-        } else if (mToner.getAmount() <= 0) {
+        } else if (mToner.getAmount() <= 0.05) {
             System.out.println("Toner is out");
             return -3; //copier is out of toner
         } else {

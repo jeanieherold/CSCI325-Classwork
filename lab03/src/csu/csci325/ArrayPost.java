@@ -5,9 +5,7 @@
  */
 package csu.csci325;
 
-import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -15,13 +13,11 @@ import java.util.List;
  */
 public class ArrayPost {
  
+    private ArrayList<Integer> mList;
    
-    //constructor
-    private ArrayPost() {
-    }
     //public constructor
-    public ArrayPost(ArrayList<Integer> list) {
-
+    public ArrayPost() {
+        mList = new ArrayList();
     }
     
     //methods

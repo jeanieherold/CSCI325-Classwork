@@ -12,8 +12,8 @@ package csu.csci325;
 public class Question {
     
     //fields
-    String mQuestion;
-    String mAnswer;
+    private String mQuestion;
+    private String mAnswer;
     
     //constructor
     public Question(String question, String answer) {
@@ -27,6 +27,10 @@ public class Question {
 
     public String getQuestion() {
         return mQuestion;
+    }
+
+    public String getAnswer() {
+        return mAnswer;
     }
     
     public boolean isCorrect(String studentAnswer) {

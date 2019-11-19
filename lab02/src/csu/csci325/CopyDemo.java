@@ -38,6 +38,35 @@ public class CopyDemo {
         System.out.println("Total copies made after print: " + manager.getTotalCopiesMade());
         System.out.println("Total copies since last toner: " + manager.getTotalCopiesSinceLastToner());
         
+        //test paper
+        Paper papertest = new Paper(300);
+        System.out.println(papertest.getAmount());
+        
+        papertest.setAmount(200);
+        System.out.println(papertest.getAmount());
+        
+        papertest.decrementPaper();
+        System.out.println(papertest.getAmount());
+        papertest.incrementPaper(20);
+        System.out.println(papertest.getAmount());
+        
+        //test toner
+        Toner tone = new Toner();
+        System.out.println(tone.getAmount());
+        
+        while(tone.incrementByOne()) {
+            System.out.println("incremeneted toner.");
+            tone.incrementByOne();
+        }
+        while(tone.decrementAmt()) {
+            System.out.println("decremented toner.");
+            tone.decrementAmt();
+        }
+        while(tone.incrementByOne()) {
+            System.out.println("incremeneted toner.");
+            tone.incrementByOne();
+        }
+        
     }
     
 }

@@ -1,0 +1,618 @@
+******************* PART 1 Qtime Test*********************
+*************COMPILATION ERROR*******************
+src/csu/csci325/Journal.java:8: error: package javafx.application does not exist
+import javafx.application.Application;
+                         ^
+src/csu/csci325/Journal.java:9: error: package javafx.event does not exist
+import javafx.event.ActionEvent;
+                   ^
+src/csu/csci325/Journal.java:10: error: package javafx.event does not exist
+import javafx.event.EventHandler;
+                   ^
+src/csu/csci325/Journal.java:11: error: package javafx.geometry does not exist
+import javafx.geometry.HPos;
+                      ^
+src/csu/csci325/Journal.java:12: error: package javafx.geometry does not exist
+import javafx.geometry.Insets;
+                      ^
+src/csu/csci325/Journal.java:13: error: package javafx.geometry does not exist
+import javafx.geometry.Pos;
+                      ^
+src/csu/csci325/Journal.java:14: error: package javafx.scene does not exist
+import javafx.scene.Scene;
+                   ^
+src/csu/csci325/Journal.java:15: error: package javafx.scene.control does not exist
+import javafx.scene.control.Button;
+                           ^
+src/csu/csci325/Journal.java:16: error: package javafx.scene.control does not exist
+import javafx.scene.control.Label;
+                           ^
+src/csu/csci325/Journal.java:17: error: package javafx.scene.control does not exist
+import javafx.scene.control.TextField;
+                           ^
+src/csu/csci325/Journal.java:18: error: package javafx.scene.layout does not exist
+import javafx.scene.layout.GridPane;
+                          ^
+src/csu/csci325/Journal.java:19: error: package javafx.scene.layout does not exist
+import javafx.scene.layout.VBox;
+                          ^
+src/csu/csci325/Journal.java:20: error: package javafx.stage does not exist
+import javafx.stage.Stage;
+                   ^
+src/csu/csci325/Journal.java:26: error: cannot find symbol
+public class Journal extends Application {
+                             ^
+  symbol: class Application
+src/csu/csci325/Journal.java:28: error: cannot find symbol
+    private Button close;
+            ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:29: error: cannot find symbol
+    private Button submit;
+            ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:30: error: cannot find symbol
+    private TextField book;
+            ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:31: error: cannot find symbol
+    private TextField verse;
+            ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:32: error: cannot find symbol
+    private TextField notes;
+            ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:38: error: cannot find symbol
+    private Label showEntry;
+            ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:41: error: cannot find symbol
+    public void start(Stage primaryStage) {
+                      ^
+  symbol:   class Stage
+  location: class Journal
+src/csu/csci325/Journal.java:108: error: cannot find symbol
+    class CloseBtnHandler implements EventHandler<ActionEvent> {
+                                     ^
+  symbol:   class EventHandler
+  location: class Journal
+src/csu/csci325/Journal.java:108: error: cannot find symbol
+    class CloseBtnHandler implements EventHandler<ActionEvent> {
+                                                  ^
+  symbol:   class ActionEvent
+  location: class Journal
+src/csu/csci325/Journal.java:111: error: cannot find symbol
+        public void handle(ActionEvent event) {
+                           ^
+  symbol:   class ActionEvent
+  location: class Journal.CloseBtnHandler
+src/csu/csci325/Journal.java:115: error: cannot find symbol
+    class SubmitHandler implements EventHandler<ActionEvent> {
+                                   ^
+  symbol:   class EventHandler
+  location: class Journal
+src/csu/csci325/Journal.java:115: error: cannot find symbol
+    class SubmitHandler implements EventHandler<ActionEvent> {
+                                                ^
+  symbol:   class ActionEvent
+  location: class Journal
+src/csu/csci325/Journal.java:118: error: cannot find symbol
+        public void handle(ActionEvent event) {
+                           ^
+  symbol:   class ActionEvent
+  location: class Journal.SubmitHandler
+src/csu/csci325/Journal.java:40: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+src/csu/csci325/Journal.java:44: error: cannot find symbol
+        Label h1 = new Label("My Quiet Time Journal");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:44: error: cannot find symbol
+        Label h1 = new Label("My Quiet Time Journal");
+                       ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:46: error: cannot find symbol
+        h1.setAlignment(Pos.CENTER);
+                        ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:48: error: cannot find symbol
+        Label lblBook = new Label("Bible Book:");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:48: error: cannot find symbol
+        Label lblBook = new Label("Bible Book:");
+                            ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:49: error: cannot find symbol
+        lblBook.setAlignment(Pos.CENTER);
+                             ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:51: error: cannot find symbol
+        Label lblVerse = new Label("Bible Verse:");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:51: error: cannot find symbol
+        Label lblVerse = new Label("Bible Verse:");
+                             ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:52: error: cannot find symbol
+        lblVerse.setAlignment(Pos.CENTER);
+                              ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:54: error: cannot find symbol
+        Label lblNotes = new Label("Notes:");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:54: error: cannot find symbol
+        Label lblNotes = new Label("Notes:");
+                             ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:55: error: cannot find symbol
+        lblNotes.setAlignment(Pos.CENTER);
+                              ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:57: error: cannot find symbol
+        book = new TextField();
+                   ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:58: error: cannot find symbol
+        verse = new TextField();
+                    ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:59: error: cannot find symbol
+        notes = new TextField();
+                    ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:61: error: cannot find symbol
+        submit = new Button("Submit");
+                     ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:62: error: cannot find symbol
+        submit.setPadding(new Insets(5));
+                              ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:66: error: cannot find symbol
+        showEntry = new Label();
+                        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:69: error: cannot find symbol
+        GridPane inputs = new GridPane();
+        ^
+  symbol:   class GridPane
+  location: class Journal
+src/csu/csci325/Journal.java:69: error: cannot find symbol
+        GridPane inputs = new GridPane();
+                              ^
+  symbol:   class GridPane
+  location: class Journal
+src/csu/csci325/Journal.java:70: error: cannot find symbol
+        inputs.setAlignment(Pos.TOP_CENTER);
+                            ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:73: error: cannot find symbol
+        inputs.setPadding(new Insets(10, 10, 10, 10));
+                              ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:83: error: cannot find symbol
+        GridPane.setHalignment(submit, HPos.LEFT);
+                                       ^
+  symbol:   variable HPos
+  location: class Journal
+src/csu/csci325/Journal.java:83: error: cannot find symbol
+        GridPane.setHalignment(submit, HPos.LEFT);
+        ^
+  symbol:   variable GridPane
+  location: class Journal
+src/csu/csci325/Journal.java:86: error: cannot find symbol
+        close = new Button("Close Journal");
+                    ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:87: error: cannot find symbol
+        close.setPadding(new Insets(5));
+                             ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:90: error: cannot find symbol
+        VBox container = new VBox(30, h1, inputs, showEntry, close);
+        ^
+  symbol:   class VBox
+  location: class Journal
+src/csu/csci325/Journal.java:90: error: cannot find symbol
+        VBox container = new VBox(30, h1, inputs, showEntry, close);
+                             ^
+  symbol:   class VBox
+  location: class Journal
+src/csu/csci325/Journal.java:91: error: cannot find symbol
+        container.setPadding(new Insets(10));
+                                 ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:92: error: cannot find symbol
+        container.setAlignment(Pos.CENTER);
+                               ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:94: error: cannot find symbol
+        Scene scene = new Scene(container, 700, 500);
+        ^
+  symbol:   class Scene
+  location: class Journal
+src/csu/csci325/Journal.java:94: error: cannot find symbol
+        Scene scene = new Scene(container, 700, 500);
+                          ^
+  symbol:   class Scene
+  location: class Journal
+src/csu/csci325/Journal.java:110: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+src/csu/csci325/Journal.java:117: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+src/csu/csci325/Journal.java:146: error: cannot find symbol
+        launch(args);
+        ^
+  symbol:   method launch(String[])
+  location: class Journal
+tests/csu/csci325/QtimeTest.java:31: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+tests/csu/csci325/QtimeTest.java:52: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+tests/csu/csci325/QtimeTest.java:82: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+tests/csu/csci325/QtimeTest.java:99: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+tests/csu/csci325/QtimeTest.java:126: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+tests/csu/csci325/QtimeTest.java:143: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+69 errors
+Compilation errors, please fix...
+******************* PART 2 Qtime Note Test*********************
+*************COMPILATION ERROR*******************
+src/csu/csci325/Journal.java:8: error: package javafx.application does not exist
+import javafx.application.Application;
+                         ^
+src/csu/csci325/Journal.java:9: error: package javafx.event does not exist
+import javafx.event.ActionEvent;
+                   ^
+src/csu/csci325/Journal.java:10: error: package javafx.event does not exist
+import javafx.event.EventHandler;
+                   ^
+src/csu/csci325/Journal.java:11: error: package javafx.geometry does not exist
+import javafx.geometry.HPos;
+                      ^
+src/csu/csci325/Journal.java:12: error: package javafx.geometry does not exist
+import javafx.geometry.Insets;
+                      ^
+src/csu/csci325/Journal.java:13: error: package javafx.geometry does not exist
+import javafx.geometry.Pos;
+                      ^
+src/csu/csci325/Journal.java:14: error: package javafx.scene does not exist
+import javafx.scene.Scene;
+                   ^
+src/csu/csci325/Journal.java:15: error: package javafx.scene.control does not exist
+import javafx.scene.control.Button;
+                           ^
+src/csu/csci325/Journal.java:16: error: package javafx.scene.control does not exist
+import javafx.scene.control.Label;
+                           ^
+src/csu/csci325/Journal.java:17: error: package javafx.scene.control does not exist
+import javafx.scene.control.TextField;
+                           ^
+src/csu/csci325/Journal.java:18: error: package javafx.scene.layout does not exist
+import javafx.scene.layout.GridPane;
+                          ^
+src/csu/csci325/Journal.java:19: error: package javafx.scene.layout does not exist
+import javafx.scene.layout.VBox;
+                          ^
+src/csu/csci325/Journal.java:20: error: package javafx.stage does not exist
+import javafx.stage.Stage;
+                   ^
+src/csu/csci325/Journal.java:26: error: cannot find symbol
+public class Journal extends Application {
+                             ^
+  symbol: class Application
+src/csu/csci325/Journal.java:28: error: cannot find symbol
+    private Button close;
+            ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:29: error: cannot find symbol
+    private Button submit;
+            ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:30: error: cannot find symbol
+    private TextField book;
+            ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:31: error: cannot find symbol
+    private TextField verse;
+            ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:32: error: cannot find symbol
+    private TextField notes;
+            ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:38: error: cannot find symbol
+    private Label showEntry;
+            ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:41: error: cannot find symbol
+    public void start(Stage primaryStage) {
+                      ^
+  symbol:   class Stage
+  location: class Journal
+src/csu/csci325/Journal.java:108: error: cannot find symbol
+    class CloseBtnHandler implements EventHandler<ActionEvent> {
+                                     ^
+  symbol:   class EventHandler
+  location: class Journal
+src/csu/csci325/Journal.java:108: error: cannot find symbol
+    class CloseBtnHandler implements EventHandler<ActionEvent> {
+                                                  ^
+  symbol:   class ActionEvent
+  location: class Journal
+src/csu/csci325/Journal.java:111: error: cannot find symbol
+        public void handle(ActionEvent event) {
+                           ^
+  symbol:   class ActionEvent
+  location: class Journal.CloseBtnHandler
+src/csu/csci325/Journal.java:115: error: cannot find symbol
+    class SubmitHandler implements EventHandler<ActionEvent> {
+                                   ^
+  symbol:   class EventHandler
+  location: class Journal
+src/csu/csci325/Journal.java:115: error: cannot find symbol
+    class SubmitHandler implements EventHandler<ActionEvent> {
+                                                ^
+  symbol:   class ActionEvent
+  location: class Journal
+src/csu/csci325/Journal.java:118: error: cannot find symbol
+        public void handle(ActionEvent event) {
+                           ^
+  symbol:   class ActionEvent
+  location: class Journal.SubmitHandler
+src/csu/csci325/Journal.java:40: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+src/csu/csci325/Journal.java:44: error: cannot find symbol
+        Label h1 = new Label("My Quiet Time Journal");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:44: error: cannot find symbol
+        Label h1 = new Label("My Quiet Time Journal");
+                       ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:46: error: cannot find symbol
+        h1.setAlignment(Pos.CENTER);
+                        ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:48: error: cannot find symbol
+        Label lblBook = new Label("Bible Book:");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:48: error: cannot find symbol
+        Label lblBook = new Label("Bible Book:");
+                            ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:49: error: cannot find symbol
+        lblBook.setAlignment(Pos.CENTER);
+                             ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:51: error: cannot find symbol
+        Label lblVerse = new Label("Bible Verse:");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:51: error: cannot find symbol
+        Label lblVerse = new Label("Bible Verse:");
+                             ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:52: error: cannot find symbol
+        lblVerse.setAlignment(Pos.CENTER);
+                              ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:54: error: cannot find symbol
+        Label lblNotes = new Label("Notes:");
+        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:54: error: cannot find symbol
+        Label lblNotes = new Label("Notes:");
+                             ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:55: error: cannot find symbol
+        lblNotes.setAlignment(Pos.CENTER);
+                              ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:57: error: cannot find symbol
+        book = new TextField();
+                   ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:58: error: cannot find symbol
+        verse = new TextField();
+                    ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:59: error: cannot find symbol
+        notes = new TextField();
+                    ^
+  symbol:   class TextField
+  location: class Journal
+src/csu/csci325/Journal.java:61: error: cannot find symbol
+        submit = new Button("Submit");
+                     ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:62: error: cannot find symbol
+        submit.setPadding(new Insets(5));
+                              ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:66: error: cannot find symbol
+        showEntry = new Label();
+                        ^
+  symbol:   class Label
+  location: class Journal
+src/csu/csci325/Journal.java:69: error: cannot find symbol
+        GridPane inputs = new GridPane();
+        ^
+  symbol:   class GridPane
+  location: class Journal
+src/csu/csci325/Journal.java:69: error: cannot find symbol
+        GridPane inputs = new GridPane();
+                              ^
+  symbol:   class GridPane
+  location: class Journal
+src/csu/csci325/Journal.java:70: error: cannot find symbol
+        inputs.setAlignment(Pos.TOP_CENTER);
+                            ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:73: error: cannot find symbol
+        inputs.setPadding(new Insets(10, 10, 10, 10));
+                              ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:83: error: cannot find symbol
+        GridPane.setHalignment(submit, HPos.LEFT);
+                                       ^
+  symbol:   variable HPos
+  location: class Journal
+src/csu/csci325/Journal.java:83: error: cannot find symbol
+        GridPane.setHalignment(submit, HPos.LEFT);
+        ^
+  symbol:   variable GridPane
+  location: class Journal
+src/csu/csci325/Journal.java:86: error: cannot find symbol
+        close = new Button("Close Journal");
+                    ^
+  symbol:   class Button
+  location: class Journal
+src/csu/csci325/Journal.java:87: error: cannot find symbol
+        close.setPadding(new Insets(5));
+                             ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:90: error: cannot find symbol
+        VBox container = new VBox(30, h1, inputs, showEntry, close);
+        ^
+  symbol:   class VBox
+  location: class Journal
+src/csu/csci325/Journal.java:90: error: cannot find symbol
+        VBox container = new VBox(30, h1, inputs, showEntry, close);
+                             ^
+  symbol:   class VBox
+  location: class Journal
+src/csu/csci325/Journal.java:91: error: cannot find symbol
+        container.setPadding(new Insets(10));
+                                 ^
+  symbol:   class Insets
+  location: class Journal
+src/csu/csci325/Journal.java:92: error: cannot find symbol
+        container.setAlignment(Pos.CENTER);
+                               ^
+  symbol:   variable Pos
+  location: class Journal
+src/csu/csci325/Journal.java:94: error: cannot find symbol
+        Scene scene = new Scene(container, 700, 500);
+        ^
+  symbol:   class Scene
+  location: class Journal
+src/csu/csci325/Journal.java:94: error: cannot find symbol
+        Scene scene = new Scene(container, 700, 500);
+                          ^
+  symbol:   class Scene
+  location: class Journal
+src/csu/csci325/Journal.java:110: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+src/csu/csci325/Journal.java:117: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+src/csu/csci325/Journal.java:146: error: cannot find symbol
+        launch(args);
+        ^
+  symbol:   method launch(String[])
+  location: class Journal
+tests/csu/csci325/QtimeNoteTest.java:127: error: constructor Qtime in class Qtime cannot be applied to given types;
+        Qtime instance = new Qtime();
+                         ^
+  required: QtimeNote
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+Note: src/csu/csci325/Qtime.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+64 errors
+Compilation errors, please fix...

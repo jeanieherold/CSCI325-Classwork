@@ -35,7 +35,7 @@ public class CardValidator {
     public String getString() {
         String userResponse;
         Scanner keyboard = new Scanner(System.in);
-        userResponse = keyboard.nextLine().replaceAll("\\s+", "").toLowerCase();
+        userResponse = keyboard.nextLine().trim().toLowerCase();
         
         mUserInputType = userResponse;
         
@@ -45,6 +45,7 @@ public class CardValidator {
     //get the integer the user entered without spaces
     public int getInt() {
         int userResponseAsInt;
+        
         userResponseAsInt = Integer.parseInt(mUserInputType);
         
         return userResponseAsInt;
@@ -55,9 +56,10 @@ public class CardValidator {
     public Boolean checkType(int iType) throws MaxAttemptsExceededException {
         boolean isValidIType = false;
         int test;
+        mAttempts++;
         
         //check how many attempts 1st - throw exception if already 2 attempts
-        if (mAttempts >= 2) {
+        if (mAttempts > 2) {
             throw new MaxAttemptsExceededException("Max attempts exceeded.");
         }
         
@@ -65,53 +67,60 @@ public class CardValidator {
         if(test == 1 || test == 2 || test == 3 || test == 4) {
             isValidIType = true;
         } else {
-            mAttempts++; 
+            isValidIType = false;
         }
         return isValidIType;
     }
     
     //for String
     public Boolean checkType(String sType) throws MaxAttemptsExceededException {
-        boolean isValidIType = false;
-        String test;
+        boolean isValidSType = false;
+        String amex = "American Express";
+        String visa = "Visa";
+        String mastercard = "Mastercard";
+        String discover = "Discover";
+        mAttempts++;
         
         //check how many attempts 1st - throw exception if already 2 attempts
-        if (mAttempts >= 2) {
+        if (mAttempts > 2) {
             throw new MaxAttemptsExceededException("Max attempts exceeded.");
         }
-            
-        test = sType;
         
-        if(test.equals("americanexpress") || test.equals("visa") || test.equals("mastercard") || test.equals("discover")) {
-            isValidIType = true;
+        if(sType.toLowerCase().equals(amex.toLowerCase()) == true || sType.toLowerCase().equals(visa.toLowerCase()) == true || sType.toLowerCase().equals(mastercard.toLowerCase()) == true || sType.toLowerCase().equals(discover.toLowerCase()) == true) {
+            isValidSType = true;
         } else {
-            mAttempts++; 
-        } 
+            isValidSType = false;
+        }
         
-        return isValidIType;
+        return isValidSType;
     }
 
     //check for valid card number
     public Boolean checkNum(String sCardNum, String sCardType, int iCardType) throws MaxAttemptsExceededException {
         
         boolean isValidCardNum = false;
+        
         String cardNumNoSpaces = sCardNum.replaceAll("\\s+", "");
 
-        if(mAttempts >= 2) {
+        if(mAttempts > 2) {
             throw new MaxAttemptsExceededException("Max attempts exceeded.");
         }
-            
-        if(checkType(sCardType) || checkType(iCardType)) {
-            if ((cardNumNoSpaces.charAt(0) == '3' && cardNumNoSpaces.length() == 15) || 
-                (cardNumNoSpaces.charAt(0) == '4' && cardNumNoSpaces.length() == 16) ||
-                (cardNumNoSpaces.charAt(0) == '5' && cardNumNoSpaces.length() == 16) ||
-                (cardNumNoSpaces.charAt(0) == '6' && cardNumNoSpaces.length() == 16)) {
+        
+        if ((cardNumNoSpaces.charAt(0) == '3' && cardNumNoSpaces.length() == 15) || 
+            (cardNumNoSpaces.charAt(0) == '4' && cardNumNoSpaces.length() == 16) ||
+            (cardNumNoSpaces.charAt(0) == '5' && cardNumNoSpaces.length() == 16) ||
+            (cardNumNoSpaces.charAt(0) == '6' && cardNumNoSpaces.length() == 16)) {
 
-            isValidCardNum = true;
+            if(checkType(sCardType) || checkType(iCardType)) {
+                isValidCardNum = true;
             } else {
                 mAttempts++;
             }
-        } 
+
+        } else {
+            mAttempts++;
+        }
+        
         return isValidCardNum;
     }
     

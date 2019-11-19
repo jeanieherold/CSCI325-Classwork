@@ -1,0 +1,55 @@
+******************* PART 1 ArrayPost Test*********************
+JUnit version 4.12
+.post10 data: [2,10,1,2]
+2
+.post10 data: [10,10,1,2,3]
+3
+.post10 data: [1,2,3,10,4,10,5,6]
+2
+
+Time: 0.011
+
+OK (3 tests)
+
++ 25.000 pts of 25.0
+Total grade so far: 25.000
+******************* PART 2 ArrayUtil Test*********************
+JUnit version 4.12
+.remove- Data: [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14]
+.remove
+
+Time: 0.011
+
+OK (2 tests)
+
++ 25.000 pts of 25.0
+Total grade so far: 50.000
+******************* PART 3Question Test*********************
+JUnit version 4.12
+.isCorrect - Data: answer given is incorrect
+.getQuestion- Data: ('What lab number is this?','03')
+.isCorrect - Data: answer given is correct
+
+Time: 0.008
+
+OK (3 tests)
+
++ 25.000 pts of 25.0
+Total grade so far: 75.000
+******************* PART 4 Quiz Test*********************
+JUnit version 4.12
+.getQuestions - Data set with indexes 0,1,2,3
+.getQuestions - Data set with indexes 0,5,7,8
+.setQuestion
+.gradeAnswers - Data set with indexes 0,1,2,3 & two incorrect answers
+.gradeAnswers - Data set with indexes 2,4,6,7 & correct answers
+.gradeAnswers - Data set with indexes 0,1,2,3 & correct answers
+
+Time: 0.011
+
+OK (6 tests)
+
++ 25.000 pts of 25.0
+Total grade so far: 100.000
+Auto-grader grade: 100.000
+*****************Finished lab03****************

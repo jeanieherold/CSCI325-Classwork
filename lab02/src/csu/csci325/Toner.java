@@ -37,8 +37,8 @@ public class Toner {
     }
     
     public boolean decrementAmt() {
-        //decide if need to test for 0 toner or >= 0.5
-        if (amountOfToner > 0) {
+        //has to have at least 0.05 left to make a copy
+        if (amountOfToner >= 0.05) {
             amountOfToner -= 0.05;
             return true;
         } else {

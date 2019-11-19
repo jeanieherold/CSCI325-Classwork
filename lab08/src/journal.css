@@ -1,0 +1,17 @@
+
+.root {
+    -fx-background-image: url("file:src/images/journal-bgd.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+    -fx-font-family: 'Actor';
+}
+
+.label {
+    -fx-font-size: 15pt;
+    -fx-text-fill:#470000;
+}
+
+#h1 {
+    -fx-font-size: 20pt;
+}

@@ -13,24 +13,21 @@ import java.util.ArrayList;
  */
 public class ArrayUtil {
     
-    
-    //constructor
-    private ArrayUtil() {
-    }
+
     //public constructor
-    public ArrayUtil(ArrayList<Integer> origList) {
+    public ArrayUtil() {
 
     }
     
     //methods
-    public ArrayList remove(ArrayList<Integer> origList, int n) {
+    public ArrayList remove(ArrayList<Integer> list, int n) {
         //create an array to hold the new array with every nth removed
         ArrayList<Integer> nRemList = new ArrayList();
         
         //loop through and remove nth elements
-        for (int i = 1; i < origList.size() + 1; i++) {
+        for (int i = 1; i < list.size() + 1; i++) {
             if (i % n != 0) {
-                nRemList.add(origList.get(i - 1));
+                nRemList.add(list.get(i - 1));
             }   
         }
 
