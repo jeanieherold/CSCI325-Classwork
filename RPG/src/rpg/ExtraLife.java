@@ -39,6 +39,7 @@ public class ExtraLife extends Application  {
     protected int level = 0;
     protected Boolean isMagic = false;
     protected Boolean isUsed = false;
+    protected Boolean taken = false;
     // Creates the label
     Label label = new Label("You have found a jar of yellow potion, would"
                 + " you like to pick it up?");
@@ -56,8 +57,8 @@ public class ExtraLife extends Application  {
         //Putting the ImageView in the hbox
         HBox YellowImage = new HBox(YellowView);
         // Setting the width and height
-        YellowView.setFitWidth(200);
-        YellowView.setFitHeight(200);
+        YellowView.setFitWidth(100);
+        YellowView.setFitHeight(100);
         
         // sets the text of the button
         Yes.setText("Yes");
@@ -72,20 +73,21 @@ public class ExtraLife extends Application  {
         // Register the event handler
         Yes.setOnAction(new YesClickHandler());
         No.setOnAction(new NoClickHandler());
-        Leave.setOnAction(e -> Platform.exit());
+        Leave.setOnAction(e -> primaryStage.close());
         Used.setOnAction(new UsedClickHandler());
         Unused.setOnAction(new UnusedClickHandler());
         
         YellowImage.setAlignment(Pos.CENTER);
         HBox ButtonHolder = new HBox(10, Yes, No, Leave);
         ButtonHolder.setAlignment(Pos.CENTER);
-        VBox LabelHolder = new VBox(100, label, YellowImage, ButtonHolder);
+        VBox LabelHolder = new VBox(10, label, YellowImage, ButtonHolder);
         LabelHolder.setAlignment(Pos.CENTER);
  
         Scene scene = new Scene(LabelHolder, 300, 250);
         primaryStage.initModality(Modality.APPLICATION_MODAL);
+        scene.getStylesheets().add("rpg-styles.css");
         
-        primaryStage.setTitle("Extra Life");
+        primaryStage.setTitle("Potion Motion");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -102,18 +104,7 @@ public class ExtraLife extends Application  {
     public void setEffect(String effect) {
         this.effect = effect;
     }
-    
-    // used is player using the item,
-    // not the player is going to use it or not
-//    public boolean isUsed(){
-//        // If the user uses it on a puzzle, then the puzzle will be skipped
-//        if(used){
-//            return true;
-//        }
-//        else{
-//            return false;
-//        }     
-//    }
+
     // These buttons dicatates when user decides to add the item
     class YesClickHandler implements EventHandler<ActionEvent>
     {
@@ -123,8 +114,9 @@ public class ExtraLife extends Application  {
                     + " Your score is increased by 25 points!");
             Yes.setVisible(false);
             No.setVisible(false);
-            
+          
             addToInventory();
+            taken = true;
         }       
     }
     class NoClickHandler implements EventHandler<ActionEvent>
@@ -135,8 +127,9 @@ public class ExtraLife extends Application  {
                     + " Your score could've been improved.");
             Yes.setVisible(false);
             No.setVisible(false);
-           
+            
             addToInventory();
+            taken = false;
         }
     }
     // These buttons will call code that allows user to have option to 
@@ -169,6 +162,7 @@ public class ExtraLife extends Application  {
         // If the user gets the item, they can choose to add it or not
         if(correctLocation){
             // adds the inventory immediately
+            score = score + 25;
             inInventory = true;
         }
         else{
@@ -179,6 +173,7 @@ public class ExtraLife extends Application  {
         return inInventory;
     }
     public boolean isOnMethod(){
+        score = score + 25;
         correctLocation = true;
         return correctLocation;
     }

@@ -40,6 +40,8 @@ public class Reverse extends Application  {
     protected Boolean isCorrect = false;
     protected String playerAnswer = "";
     protected String correctAnswer = "";
+    
+    protected Boolean taken = false;
     // Creates the label
     Label label = new Label("You have found a jar of clear liquid, would"
                 + " you like to pick it up?");
@@ -57,8 +59,8 @@ public class Reverse extends Application  {
         //Putting the ImageView in the hbox
         HBox ClearImage = new HBox(ClearView);
         // Setting the width and height
-        ClearView.setFitWidth(200);
-        ClearView.setFitHeight(200);
+        ClearView.setFitWidth(100);
+        ClearView.setFitHeight(100);
         
         // sets the text of the button
         Yes.setText("Yes");
@@ -80,13 +82,14 @@ public class Reverse extends Application  {
         ClearImage.setAlignment(Pos.CENTER);
         HBox ButtonHolder = new HBox(10, Yes, No, Leave);
         ButtonHolder.setAlignment(Pos.CENTER);
-        VBox LabelHolder = new VBox(100, label, ClearImage, ButtonHolder);
+        VBox LabelHolder = new VBox(10, label, ClearImage, ButtonHolder);
         LabelHolder.setAlignment(Pos.CENTER);
  
         Scene scene = new Scene(LabelHolder, 300, 250);
         primaryStage.initModality(Modality.APPLICATION_MODAL);
+        scene.getStylesheets().add("rpg-styles.css");
         
-        primaryStage.setTitle("Reverse");
+        primaryStage.setTitle("Potion Motion");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -111,10 +114,13 @@ public class Reverse extends Application  {
         public void handle(ActionEvent event){
             label.setText("You have picked up a 'reverse' potion. This will "
                     + "hurt when you solve a puzzle.");
+            taken = true;
             Yes.setVisible(false);
             No.setVisible(false);
             
             addToInventory();
+            
+            taken = true;
         }       
     }
     class NoClickHandler implements EventHandler<ActionEvent>
@@ -122,10 +128,13 @@ public class Reverse extends Application  {
         @Override
         public void handle(ActionEvent event){
             label.setText("You have left a 'reverse' potion. Lucky!");
+            
             Yes.setVisible(false);
             No.setVisible(false);
            
             addToInventory();
+            
+            taken = false;
         }
     }
     class UsedClickHandler implements EventHandler<ActionEvent>
