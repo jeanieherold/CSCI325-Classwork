@@ -18,6 +18,7 @@ public class QtimeNote implements Comparable <QtimeNote>{
     private String mVerse;
     private String mNotes;
     
+    //constructor
     public QtimeNote (String book, String verse, String note) {
         
         mDate = new Date();
@@ -28,6 +29,7 @@ public class QtimeNote implements Comparable <QtimeNote>{
     }
     
     //methods
+    @Override
     public int compareTo(QtimeNote n) {
         
         String compareStr = mBook + mVerse;

@@ -64,7 +64,7 @@ public class Journal extends Application {
         
 
         showEntry = new Label();
-        entries = new Qtime(qnote);
+        entries = new Qtime();
         
         GridPane inputs = new GridPane();
         inputs.setAlignment(Pos.TOP_CENTER);
@@ -126,10 +126,9 @@ public class Journal extends Application {
             System.out.println(qnote.getUserNotes());
             
             entries.setNote(qnote);
-            
-//            showEntry.setText(entries.getNoteList());
 
-            System.out.println(entries.toString());
+            showEntry.setText("You entered: " + qnote.toString()
+            + "\nAll Qtime Notes: " + entries.getNoteList());
             
             //reset for next entry
             book.clear();

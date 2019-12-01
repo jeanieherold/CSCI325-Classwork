@@ -19,10 +19,10 @@ public class Qtime {
     int  qNoteListSize;
     
     //constructor
-    public Qtime(QtimeNote listnotes) {
+    public Qtime() {
         
         qtimeNotes = new LinkedList(); 
-        qNoteListSize = 0;
+        qNoteListSize = qtimeNotes.size();
        
     }
     
@@ -32,7 +32,7 @@ public class Qtime {
     }
 
     public int getNoteListSize() {
-        return qNoteListSize;
+        return qtimeNotes.size();
     }
     
     public void setNote(QtimeNote qtimeNote) {
@@ -42,26 +42,32 @@ public class Qtime {
     }
 
     public void removeNotes(String book) {
-        Iterator<QtimeNote> iter = qtimeNotes.iterator();
         
-        if (iter.next().getBookOfBible().equals(book)) {
-            iter.remove();
+        Iterator<QtimeNote> iter = qtimeNotes.iterator();
+        while(iter.hasNext()){
+            QtimeNote note = iter.next();
+            String bookofbible = note.getBookOfBible();
+            if(bookofbible.equals(book)){
+                iter.remove();
+            }
         }
+                    
     }
-    
+
     public void updateUserNote(QtimeNote qtimeNote, String userNotes) {
-        Iterator<QtimeNote> iter = qtimeNotes.iterator();
         
-        if (iter.next().equals(qtimeNote)) {
-            iter.next().updateUserNotes(userNotes);
-        }     
+        for (QtimeNote note : qtimeNotes) {
+            if (note.toString().equals(qtimeNote.toString())) {
+                note.updateUserNotes(userNotes);
+            }
+        }
+
     }
     
     public void sortNotes() {
 
         Collections.sort(qtimeNotes);
-  
-        
+       
     }
     
     
